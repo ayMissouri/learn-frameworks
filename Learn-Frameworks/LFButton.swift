@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct LFButton: View {
+    
+    var title: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(title)
+            .font(.title2)
+            .fontWeight(.semibold)
+            .frame(width: 280, height: 50)
+            .background(Color.red)
+            .foregroundColor(Color.white)
+            .cornerRadius(10)
     }
 }
 
 #Preview {
-    LFButton()
+    LFButton(title: "Test Title")
 }
